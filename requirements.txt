@@ -1,0 +1,13 @@
+fastapi
+uvicorn
+pydantic
+python-multipart
+pdfminer.six
+sentence-transformers
+scikit-learn
+numpy
+keybert
+tenacity>=8.2.0,<9.0.0
+httpx>=0.27.0,<0.28.0
+tiktoken>=0.7,<1
+packaging>=23.2,<24.0
