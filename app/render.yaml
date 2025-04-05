@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 services:
   - type: web
     name: resume-analyzer
@@ -6,3 +7,27 @@ services:
       - key: PORT
         value: 8080
     autoDeploy: true
+=======
+services:
+  - type: web
+    name: resume-analyzer-api
+    env: python
+    plan: free
+    buildCommand: |
+      pip install -r requirements.txt
+      python -m spacy download en_core_web_sm
+    startCommand: bash start.sh
+    envVars:
+      - key: PORT
+        value: 8000
+
+  - type: web
+    name: resume-analyzer-ui
+    env: python
+    plan: free
+    buildCommand: pip install -r requirements.txt
+    startCommand: streamlit run frontend/streamlit_app.py --server.port 10000 --server.enableCORS false
+    envVars:
+      - key: PORT
+        value: 10000
+>>>>>>> bedcb33beee1727551caa92bfe39a98312c3cb3f
