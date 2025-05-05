@@ -26,5 +26,5 @@ async def analyze_resume_file(
     return {
         "match_score": score,
         "missing_skills": missing_skills,
-        "resume_text": resume_tex
+        "resume_text": resume_text
     }
